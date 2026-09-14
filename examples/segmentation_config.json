@@ -1,0 +1,23 @@
+{
+  "architecture": {
+    "name": "U-Net",
+    "module": "segmentation:unet",
+    "input_size": [224, 224],
+    "params": {
+      "encoder_name": "resnet34",
+      "encoder_weights": null,
+      "in_channels": 3,
+      "num_classes": 1,
+      "activation": null
+    }
+  },
+  "dataset": {
+    "format": "segmentation"
+  },
+  "training": {
+    "target": {
+      "type": "segmentation",
+      "labels": ["foreground"]
+    }
+  }
+}

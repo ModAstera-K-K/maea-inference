@@ -1,0 +1,26 @@
+{
+  "architecture": {
+    "name": "ResNet 18",
+    "module": "timm:resnet18",
+    "input_size": [224, 224],
+    "params": {
+      "num_classes": 1,
+      "pretrained": false
+    }
+  },
+  "criterion": {
+    "module": "nn.BCEWithLogitsLoss",
+    "params": {}
+  },
+  "dataset": {
+    "format": "image",
+    "max_num_classes": 2
+  },
+  "training": {
+    "target": {
+      "type": "classification",
+      "labels": ["example_label"],
+      "class_count": 2
+    }
+  }
+}
